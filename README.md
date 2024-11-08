@@ -1,43 +1,44 @@
-### Ex.No: 6 To check whether the string is Palindrome and generate test cases.
+# Ex.No: 6 SORTING
 ## DATE:
 ## REGISTER NUMBER : 212222040037
-## AIM:
-Write a Python program to check whether the string is Palindrome and generate test cases.
+### AIM:
+Write a Python program for sorting and inspect for failures.
 
-## Algorithm:
-Start
-Get an input from the user by prompting
-Run a loop form 0 to len/2.
-Check if the characters are the same both from the start and the end till len/2.
-If it is, return the result that it is a palindrome.
-Else, return that it is not a palindrome.
-Stop the program.
-Program:
-def Palindrome(string):
-    for i in range(0, int(len(string)/2)):
-        if string[i] != string[len(string)-i-1]:
-            return False
-    return True
+### Algorithm:
+1. Start the program.
+2. Get the number of elements from user
+3. Get the elements to be sorted
+4. Traverse the array and sort the elements one by one
+5. Print the sorted array
+6. Stop the program.
+   
+### Program:
+```
+n = int(input("Enter the number of elements: "))
+arr = []
+try:
+    for i in range(n):
+        a = float(input("Enter the element: "))
+        arr.append(a)
+    
+    # Sorting the array using Bubble Sort
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
 
-s = input("Enter a string: ")
-c = 1
+    print("The array after sorting:")
+    for i in range(n):
+        print(int(arr[i]), end=' ')
+        
+except ValueError:
+    print("Enter a valid number")
+```
+### Output:
+![sorting output](https://github.com/user-attachments/assets/d2765b87-6b1f-41f5-8bdd-324d0c328343)
 
- Check if all characters are alphabetic
-for i in s:
-    if not i.isalpha():
-        c = 0
 
-if c == 0:
-    print("Enter a valid string")
-else:
-    answer = Palindrome(s)
-    if answer:
-        print("The given string is a palindrome")
-    else:
-        print("The given string is not a palindrome")
-
-Output:
-6
-
-Result:
-Thus, a program to check palindrome has been written and test cases have been written and verified successfully.
+### Result:
+Thus, a program for sorting has been written and test cases have been written and verified successfully.
