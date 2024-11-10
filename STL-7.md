@@ -1,5 +1,5 @@
-# Ex.No: 6 SORTING
-## DATE:
+# Ex.No: 7 - SORTING
+## DATE: 24-9-24
 ## REGISTER NUMBER : 212222040037
 ### AIM:
 Write a Python program for sorting and inspect for failures.
